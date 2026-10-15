@@ -1,0 +1,1267 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc"><title id="title">Artifactory — Design with light. Read the world.</title><desc id="desc">The Artifactory crystal with gently changing spectral highlights. Optical sensing, photonics and engineering tools.</desc><style>.crystal-mark {
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+}
+.crystal-mark {
+  overflow: visible;
+}
+.crystal-body {
+  stroke-linejoin: round;
+}
+.crystal-light {
+  opacity: 0.48;
+  animation: crystal-light-cycle 13s ease-in-out infinite alternate;
+  animation-play-state: paused;
+}
+.crystal-light-b {
+  animation-delay: -11s;
+  animation-duration: 19s;
+}
+.crystal-light-c {
+  animation-delay: -7s;
+  animation-duration: 11s;
+}
+.is-crystal-lit .crystal-light {
+  animation-play-state: running;
+}
+.crystal-freckles {
+  opacity: 0.6;
+}
+/* Keep the small silhouette clear instead of filling it with tiny detail. */
+.brand .crystal-seams {
+  display: none;
+}
+.crystal-motion-control {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35em;
+  width: fit-content;
+  min-height: 44px;
+  padding: 8px 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  font: 11px var(--font-mono);
+  cursor: pointer;
+  text-underline-offset: 4px;
+}
+.crystal-motion-control:hover {
+  text-decoration: underline;
+}
+.crystal-motion-control[hidden] {
+  display: none;
+}
+.footer-brand .crystal-motion-control {
+  display: flex;
+  margin-top: 12px;
+  color: #d8c4f3;
+}
+.footer-brand .crystal-motion-control[hidden] {
+  display: none;
+}
+.about-editorial-mark {
+  justify-items: center;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 8px;
+  text-align: center;
+}
+.about-editorial-mark .crystal-motion-control {
+  /* Reserve space while the deferred script enables the control. */
+  display: inline-flex;
+}
+.about-editorial-mark .crystal-motion-control[hidden] {
+  visibility: hidden;
+}
+.project-heading-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: clamp(32px, 5vw, 80px);
+  align-items: start;
+}
+.project-heading-grid h2 {
+  font-size: clamp(30px, 3.3vw, 50px);
+  line-height: 1.18;
+  letter-spacing: -0.045em;
+  margin: 0;
+}
+.project-heading-grid h2 span {
+  color: var(--af-muted);
+}
+.project-heading-copy {
+  max-width: 480px;
+  padding-top: 3px;
+}
+.project-heading-copy .project-heading-lead {
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--af-ink);
+  margin: 0 0 22px;
+  max-width: 32ch;
+}
+.project-heading-copy dl {
+  margin: 0;
+  display: grid;
+  gap: 14px;
+}
+.project-heading-copy dl > div {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 16px;
+}
+.project-heading-copy dt {
+  font: 11px/1.75 var(--font-mono);
+  color: var(--af-teal-readable);
+  padding-top: 1px;
+}
+.project-heading-copy dd {
+  margin: 0;
+  color: var(--af-muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+.project-intro > .section-heading {
+  margin-bottom: 48px;
+}
+@keyframes crystal-light-cycle {
+  from {
+    opacity: 0.15;
+  }
+  to {
+    opacity: 0.9;
+  }
+}
+@media (max-width: 700px) {
+  .brand .crystal-mark {
+    width: 40px;
+    height: 40px;
+    flex-basis: 40px;
+  }
+  .project-heading-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .project-heading-grid h2 {
+    font-size: clamp(28px, 7.4vw, 42px);
+  }
+  .project-heading-copy {
+    max-width: 100%;
+    padding-top: 0;
+  }
+  .project-heading-copy .project-heading-lead {
+    max-width: 36ch;
+    font-size: 15px;
+    margin-bottom: 18px;
+  }
+  .project-heading-copy dl > div {
+    grid-template-columns: 72px 1fr;
+    gap: 12px;
+  }
+  .about-editorial-mark svg {
+    width: min(100%, 340px);
+  }
+  .about-editorial-mark .crystal-caption {
+    font-size: 10px;
+  }
+}
+@media (prefers-reduced-motion: reduce), print {
+  .crystal-light {
+    animation: none;
+    opacity: 0.5;
+  }
+}
+
+/* The crystal is an independent light source; the wordmark still links home. */
+.brand-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  flex-shrink: 0;
+}
+.crystal-trigger {
+  display: grid;
+  place-items: center;
+  position: relative;
+  isolation: isolate;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+  cursor: pointer;
+}
+.crystal-trigger .crystal-mark {
+  width: 100%;
+  height: auto;
+}
+/* Light is confined to facets and facet ports; no circular backdrop. */
+.crystal-trigger-feature {
+  width: min(100%, 420px);
+  height: auto;
+  aspect-ratio: 1;
+}
+.crystal-trigger:is(:hover, :focus-visible, [aria-pressed="true"]) {
+  background: transparent;
+  box-shadow: none;
+}
+.crystal-trigger:focus-visible {
+  outline: 1px solid var(--af-purple, #9873cc);
+  outline-offset: 5px;
+}
+@media (max-width: 700px) {
+  .brand-lockup {
+    gap: 5px;
+  }
+  .crystal-trigger:not(.crystal-trigger-feature) {
+    width: 44px;
+    height: 44px;
+    flex-basis: 44px;
+  }
+  .crystal-trigger-feature {
+    width: min(100%, 340px);
+  }
+}
+/* Small interactive studies: CSS circulation, geometry only changes on input. */
+/* Give active engineering artwork priority over decorative crystal repainting. */
+.is-artwork-active .crystal-mark * {
+  animation-play-state: paused !important;
+}
+.preview-stage {
+  position: relative;
+  width: 100%;
+}
+.project-editorial-cover .project-cover-art {
+  aspect-ratio: auto;
+}
+.preview-interact {
+  position: absolute;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  touch-action: pan-y;
+  transform: translate(-50%, -50%);
+}
+.preview-interact span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.preview-interact-artisense {
+  left: 55.1%;
+  top: 44.2%;
+  width: 28.2%;
+  height: 23.3%;
+}
+.preview-interact-aifield {
+  left: 28.4%;
+  top: 21.86%;
+  width: 11.8%;
+  height: 9.4%;
+}
+.preview-part rect {
+  fill: #a1efe7;
+  fill-opacity: 0.025;
+  stroke: #a8e8df;
+  stroke-opacity: 0.45;
+  stroke-width: 1;
+  transition:
+    fill-opacity 0.2s,
+    stroke-opacity 0.2s;
+}
+.preview-part text {
+  fill: #ddfff8;
+  font: 12px var(--font-mono);
+  letter-spacing: 0.5px;
+}
+.preview-stage:has(.preview-interact:is(:hover, :focus-visible))
+  .preview-part
+  rect {
+  fill-opacity: 0.12;
+  stroke-opacity: 1;
+}
+.no-js .preview-part {
+  display: none;
+}
+.preview-interact:disabled {
+  display: none;
+}
+.preview-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+}
+.preview-controls[hidden] {
+  visibility: hidden;
+}
+.preview-controls [role="status"] {
+  font: 10px/1.6 var(--font-mono);
+  color: var(--af-muted);
+}
+.preview-controls button {
+  border: 0;
+  padding: 10px 0;
+  min-height: 44px;
+  background: none;
+  color: var(--af-ink);
+  font: 10px var(--font-mono);
+  cursor: pointer;
+  flex-shrink: 0;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.preview-study-link {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  min-height: 44px;
+  width: fit-content;
+  font-size: 13px;
+}
+.project-cover-art .preview-flow {
+  display: initial;
+  fill: none;
+  opacity: 0.95;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-dasharray: 70 930;
+  stroke-dashoffset: 0;
+  animation: preview-circulation 3s linear infinite !important;
+  animation-play-state: paused !important;
+}
+.project-cover-art.pic-ring .preview-flow {
+  stroke: #fff1c8;
+}
+.preview-playing .project-cover-art .preview-flow {
+  animation-play-state: running !important;
+}
+.project-cover-art .sample-label {
+  display: none;
+}
+.project-cover-art .mems-rest {
+  display: none;
+}
+@keyframes preview-circulation {
+  to {
+    stroke-dashoffset: -1000;
+  }
+}
+.no-js .project-cover-art .preview-flow {
+  animation: none !important;
+  opacity: 0;
+}
+@media (max-width: 400px) {
+  .preview-controls {
+    align-items: flex-start;
+  }
+  .preview-controls [role="status"] {
+    max-width: 21ch;
+  }
+}
+@media (prefers-reduced-motion: reduce), print {
+  .project-cover-art .preview-flow {
+    animation: none !important;
+    opacity: 0;
+  }
+}
+
+/* The pigment stays legible on white even at the dim point of a light cycle. */
+.crystal-mark {
+  --crystal-letter-1: #63338d;
+  --crystal-letter-2: #ac78cf;
+  --crystal-letter-3: #582b83;
+  --crystal-letter-4: #ba8cdd;
+  --crystal-letter-5: #7645a1;
+  --crystal-ice-edge: #8b60b6;
+}
+.crystal-letter-paint stop:nth-child(1) {
+  stop-color: var(--crystal-letter-1);
+}
+.crystal-letter-paint stop:nth-child(2) {
+  stop-color: var(--crystal-letter-2);
+}
+.crystal-letter-paint stop:nth-child(3) {
+  stop-color: var(--crystal-letter-3);
+}
+.crystal-letter-paint stop:nth-child(4) {
+  stop-color: var(--crystal-letter-4);
+}
+.crystal-letter-paint stop:nth-child(5) {
+  stop-color: var(--crystal-letter-5);
+}
+.crystal-ice-paint stop:first-child,
+.crystal-ice-paint stop:last-child {
+  stop-color: var(--crystal-ice-edge);
+}
+[data-theme="dark"] .crystal-mark {
+  --crystal-letter-1: #f8eeff;
+  --crystal-letter-2: #c7a3ff;
+  --crystal-letter-3: #9373d8;
+  --crystal-letter-4: #ead5ff;
+  --crystal-letter-5: #b390f2;
+  --crystal-ice-edge: #f5e9ff;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) .crystal-mark {
+    --crystal-letter-1: #f8eeff;
+    --crystal-letter-2: #c7a3ff;
+    --crystal-letter-3: #9373d8;
+    --crystal-letter-4: #ead5ff;
+    --crystal-letter-5: #b390f2;
+    --crystal-ice-edge: #f5e9ff;
+  }
+}
+.crystal-pulse-field {
+  opacity: 0.55;
+  transition: opacity 0.6s ease;
+}
+.crystal-pulse {
+  opacity: 0.25;
+  animation: crystal-passage 7.3s ease-in-out infinite;
+  animation-play-state: paused;
+}
+.crystal-pulse-rose {
+  animation-duration: 11.9s;
+  animation-delay: -4.2s;
+  animation-direction: reverse;
+}
+.crystal-pulse-gold {
+  animation-duration: 17.3s;
+  animation-delay: -9.1s;
+}
+.is-crystal-lit .crystal-pulse {
+  animation-play-state: running;
+}
+@keyframes crystal-passage {
+  0%,
+  100% {
+    opacity: 0.08;
+    transform: translate(-110px, 32px);
+  }
+  22% {
+    opacity: 0.4;
+  }
+  39% {
+    opacity: 0.85;
+  }
+  51% {
+    opacity: 0.35;
+  }
+  65% {
+    opacity: 0.7;
+  }
+  88% {
+    opacity: 0.08;
+    transform: translate(190px, -24px);
+  }
+}
+/* Identical route geometry and timing at every logo size. The nested field
+   follows pointer incidence while individual bands continue their own motion. */
+.crystal-incidence,
+.crystal-transmission-incidence {
+  transform: translate(
+    var(--crystal-incidence-x, 0px),
+    var(--crystal-incidence-y, 0px)
+  );
+}
+.crystal-guided-field {
+  opacity: 0.42;
+  transition: opacity 0.6s ease;
+}
+/* Feathered light volumes follow the cuts; no dashed travelling strokes. */
+.crystal-guided {
+  offset-path: path(
+    "M42 92 Q100 125 89 228 Q124 162 160 104 Q196 162 231 228 L278 228"
+  );
+  offset-distance: 0%;
+  offset-rotate: auto;
+  animation: crystal-guided-travel 28s ease-in-out infinite;
+  animation-play-state: paused;
+}
+.crystal-route-1 .crystal-guided {
+  offset-path: path(
+    "M278 92 Q220 125 231 228 Q196 162 160 104 Q124 162 89 228 L42 228 L160 296"
+  );
+  animation-duration: 32s;
+  animation-delay: -10s;
+}
+.crystal-route-2 .crystal-guided {
+  offset-path: path(
+    "M160 24 L160 85 Q145 150 116 201 Q160 203 204 201 L231 228 L278 228"
+  );
+  animation-duration: 36s;
+  animation-delay: -22s;
+}
+.is-crystal-lit .crystal-guided {
+  animation-play-state: running;
+}
+@keyframes crystal-guided-travel {
+  0%,
+  100% {
+    offset-distance: 0%;
+    opacity: 0.12;
+  }
+  18%,
+  78% {
+    opacity: 0.85;
+  }
+  45%,
+  50% {
+    offset-distance: 100%;
+    opacity: 0.18;
+  }
+}
+.crystal-coupling {
+  opacity: 0;
+  transition: opacity 0.65s ease;
+}
+.crystal-port {
+  opacity: 0.45;
+}
+.crystal-port > path {
+  transform-box: fill-box;
+  transform-origin: right center;
+  animation: crystal-port-flow 4.8s ease-in-out infinite;
+  animation-play-state: paused;
+}
+.crystal-port-b > path {
+  animation-delay: -2.4s;
+}
+.crystal-port-c > path {
+  animation-duration: 7s;
+  animation-delay: -4s;
+}
+.crystal-port-spectrum {
+  mix-blend-mode: screen;
+}
+@keyframes crystal-port-flow {
+  0%,
+  100% {
+    transform: scaleX(0.35) scaleY(0.5);
+    opacity: 0.12;
+  }
+  38% {
+    transform: scaleX(0.8) scaleY(0.8);
+    opacity: 0.7;
+  }
+  63% {
+    transform: scaleX(1) scaleY(1);
+    opacity: 1;
+  }
+  85% {
+    transform: scaleX(0.65) scaleY(0.6);
+    opacity: 0.3;
+  }
+}
+.crystal-trigger:is([aria-pressed="true"], :focus-visible)
+  .crystal-guided-field,
+.crystal-trigger:is([aria-pressed="true"], :focus-visible) .crystal-pulse-field,
+.crystal-trigger:is([aria-pressed="true"], :focus-visible) .crystal-coupling {
+  opacity: 1;
+}
+.crystal-trigger:is([aria-pressed="true"], :focus-visible)
+  .is-crystal-lit
+  .crystal-port
+  > path {
+  animation-play-state: running;
+}
+@media (hover: hover) {
+  .crystal-trigger:hover .crystal-guided-field,
+  .crystal-trigger:hover .crystal-pulse-field,
+  .crystal-trigger:hover .crystal-coupling {
+    opacity: 1;
+  }
+  .crystal-trigger:hover .is-crystal-lit .crystal-port > path {
+    animation-play-state: running;
+  }
+}
+/* Moving white caustics with spectral fringes, individually clipped to glass
+   faces. Shared geometry at header and feature sizes; no external filaments. */
+.crystal-refraction-field {
+  opacity: 0.55;
+  transition: opacity 0.65s ease;
+}
+.crystal-refraction {
+  animation: crystal-refraction-drift 10s ease-in-out infinite alternate;
+  animation-play-state: paused;
+  transform-origin: 0 0;
+}
+.crystal-refraction-white {
+  opacity: 0.5;
+}
+.crystal-deflection {
+  transform-origin: 0 0;
+}
+/* Optical sizing: keep colour and fine reflections readable at 44–46 px. */
+.crystal-trigger:not(.crystal-trigger-feature) .crystal-refraction-field {
+  opacity: 0.9;
+}
+.crystal-trigger:not(.crystal-trigger-feature) .crystal-refraction-white {
+  opacity: 0.85;
+  stroke-width: 4;
+}
+.crystal-trigger:not(.crystal-trigger-feature) .crystal-spectral-cool {
+  stop-opacity: 0.9;
+}
+.crystal-trigger:not(.crystal-trigger-feature) .crystal-spectral-warm {
+  stop-opacity: 1;
+}
+.crystal-trigger:not(.crystal-trigger-feature) .crystal-spectral-rose {
+  stop-opacity: 0.8;
+}
+.crystal-trigger:not(.crystal-trigger-feature) .crystal-shine {
+  stroke-width: 4.5;
+}
+
+.crystal-trigger:not(.crystal-trigger-feature):is(
+    :hover,
+    :focus-visible,
+    [aria-pressed="true"]
+  )
+  .crystal-refraction-field {
+  opacity: 1;
+}
+.crystal-refraction-1,
+.crystal-refraction-4 {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.crystal-refraction-2,
+.crystal-refraction-5 {
+  animation-delay: -8s;
+  animation-duration: 17s;
+}
+.crystal-refraction-3,
+.crystal-refraction-6 {
+  animation-delay: -5s;
+  animation-duration: 11s;
+}
+.crystal-refraction-7 {
+  animation-delay: -7s;
+  animation-duration: 15s;
+}
+.is-crystal-lit .crystal-refraction {
+  animation-play-state: running;
+}
+.crystal-trigger:is([aria-pressed="true"], :focus-visible)
+  .crystal-refraction-field {
+  opacity: 1;
+}
+@media (hover: hover) {
+  .crystal-trigger:hover .crystal-refraction-field {
+    opacity: 1;
+  }
+}
+@keyframes crystal-refraction-drift {
+  0% {
+    transform: translate(-12px, -22px) rotate(-12deg) scaleY(0.8);
+    opacity: 0.6;
+  }
+  25% {
+    transform: translate(14px, -4px) rotate(8deg) scaleY(1.15);
+    opacity: 1;
+  }
+  46% {
+    transform: translate(-8px, 13px) rotate(-5deg) scaleY(0.85);
+    opacity: 0.7;
+  }
+  75% {
+    transform: translate(18px, 24px) rotate(17deg) scaleY(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-3px, 4px) rotate(4deg) scaleY(0.9);
+    opacity: 0.75;
+  }
+}
+.crystal-spectral-stop {
+  animation: crystal-spectrum-cool 23s ease-in-out infinite alternate;
+  animation-play-state: paused;
+}
+.crystal-spectral-warm {
+  animation-name: crystal-spectrum-warm;
+  animation-duration: 29s;
+  animation-delay: -7s;
+}
+.crystal-spectral-rose {
+  animation-name: crystal-spectrum-rose;
+  animation-duration: 31s;
+  animation-delay: -12s;
+}
+.crystal-shine {
+  stroke-width: 1.6;
+  opacity: 0.05;
+  animation: crystal-facet-brilliance 13s ease-in-out infinite;
+  animation-play-state: paused;
+}
+.crystal-shine-b {
+  animation-delay: -5s;
+  animation-duration: 17s;
+}
+.crystal-shine-c {
+  animation-delay: -9s;
+  animation-duration: 19s;
+}
+.is-crystal-lit :is(.crystal-spectral-stop, .crystal-shine) {
+  animation-play-state: running;
+}
+@keyframes crystal-spectrum-cool {
+  0% {
+    stop-color: #8ee9fa;
+  }
+  40% {
+    stop-color: #c4afff;
+  }
+  75% {
+    stop-color: #f7c19a;
+  }
+  100% {
+    stop-color: #9fe9d4;
+  }
+}
+@keyframes crystal-spectrum-warm {
+  0% {
+    stop-color: #fff5cd;
+  }
+  55% {
+    stop-color: #d6e7ff;
+  }
+  100% {
+    stop-color: #ffe2ef;
+  }
+}
+@keyframes crystal-spectrum-rose {
+  0% {
+    stop-color: #f2a9dc;
+  }
+  35% {
+    stop-color: #a4c7ff;
+  }
+  70% {
+    stop-color: #ffe0a9;
+  }
+  100% {
+    stop-color: #d5a8f4;
+  }
+}
+@keyframes crystal-facet-brilliance {
+  0%,
+  45%,
+  100% {
+    opacity: 0.04;
+  }
+  61% {
+    opacity: 0.3;
+  }
+  72% {
+    opacity: 0.95;
+  }
+  84% {
+    opacity: 0.15;
+  }
+}
+/* Brief transmission through hazy air, anchored to cut edges. Static blur,
+   bounded geometry and no particles or per-frame JavaScript. */
+.crystal-air {
+  opacity: 0.7;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+}
+.crystal-air-beam {
+  opacity: 0;
+  transform-origin: 0 0;
+  animation: crystal-air-passage 24s ease-in-out infinite;
+  animation-delay: -8s;
+  animation-play-state: paused;
+}
+.crystal-air-beam-1 {
+  animation-delay: -17s;
+}
+.crystal-air-beam-2 {
+  animation-delay: -1s;
+}
+.crystal-inner-glint {
+  opacity: 0.06;
+  animation: crystal-inner-brilliance 24s ease-in-out infinite;
+  animation-delay: -5s;
+  animation-play-state: paused;
+}
+.crystal-inner-glint-1 {
+  animation-delay: -13s;
+}
+.crystal-inner-glint-2 {
+  animation-delay: -21s;
+}
+.is-crystal-lit :is(.crystal-air-beam, .crystal-inner-glint) {
+  animation-play-state: running;
+}
+.crystal-trigger:is([aria-pressed="true"], :focus-visible) .crystal-air {
+  opacity: 1;
+}
+@media (hover: hover) {
+  .crystal-trigger:hover .crystal-air {
+    opacity: 1;
+  }
+}
+@keyframes crystal-air-passage {
+  0%,
+  28%,
+  60%,
+  100% {
+    opacity: 0;
+    transform: rotate(-4deg) scaleY(0.75);
+  }
+  37% {
+    opacity: 0.3;
+  }
+  43% {
+    opacity: 0.85;
+    transform: rotate(1deg) scaleY(1.1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: rotate(5deg) scaleY(0.9);
+  }
+}
+@keyframes crystal-inner-brilliance {
+  0%,
+  29%,
+  48%,
+  100% {
+    opacity: var(--crystal-inner-rest, 0.06);
+  }
+  35% {
+    opacity: var(--crystal-inner-rise, 0.35);
+  }
+  39%,
+  41% {
+    opacity: var(--crystal-inner-peak, 0.9);
+  }
+  44% {
+    opacity: var(--crystal-inner-fall, 0.25);
+  }
+}
+/* Two restrained depth layers. One small static blur on the rear geometry;
+   the front bands remain sharp and use only transform/opacity animation. */
+.crystal-depth {
+  opacity: 0.7;
+  transition: opacity 0.6s ease;
+}
+.crystal-rear-facet {
+  opacity: 0.1;
+  animation: crystal-rear-reflection 24s ease-in-out infinite;
+  animation-play-state: paused;
+}
+.crystal-transmission {
+  opacity: 0.45;
+  transition: opacity 0.6s ease;
+}
+.crystal-internal-band {
+  animation: crystal-internal-reflection 19s ease-in-out infinite alternate;
+  animation-play-state: paused;
+  transform-origin: 0 0;
+}
+.crystal-internal-band-1 {
+  animation-duration: 23s;
+  animation-delay: -9s;
+}
+.crystal-internal-band-2 {
+  animation-duration: 29s;
+  animation-delay: -17s;
+}
+.crystal-facet-flashes {
+  opacity: 0.86;
+}
+.crystal-trigger:not(.crystal-trigger-feature) .crystal-depth {
+  opacity: 0.9;
+}
+.crystal-trigger:not(.crystal-trigger-feature) .crystal-transmission {
+  opacity: 0.7;
+}
+/* Optical sizing for the header: broader soft volumes and stronger internal
+   colour at 44px, using the same shapes, clocks and motion gates. */
+.site-header .crystal-mark {
+  --crystal-inner-rest: 0.12;
+  --crystal-inner-rise: 0.6;
+  --crystal-inner-peak: 1;
+  --crystal-inner-fall: 0.45;
+}
+.site-header .crystal-guided-field {
+  opacity: 0.85;
+}
+.site-header .crystal-guided ellipse {
+  transform: scale(1.18, 1.25);
+}
+.site-header .crystal-inner-glint {
+  transform: scale(1.18);
+  transform-origin: 0 0;
+}
+.site-header .crystal-trigger .crystal-transmission {
+  opacity: 0.88;
+}
+.site-header [id$="-stream"] stop:nth-child(-n + 2) {
+  stop-opacity: 0.9;
+}
+.site-header [id$="-stream"] stop:nth-child(3) {
+  stop-opacity: 0.5;
+}
+.site-header [id$="-dispersion"] stop:nth-child(2) {
+  stop-opacity: 0.7;
+}
+.site-header [id$="-dispersion"] stop:nth-child(n + 3):nth-child(-n + 6) {
+  stop-opacity: 0.95;
+}
+.is-crystal-lit :is(.crystal-rear-facet, .crystal-internal-band) {
+  animation-play-state: running;
+}
+.crystal-trigger:is([aria-pressed="true"], :focus-visible)
+  :is(.crystal-depth, .crystal-transmission) {
+  opacity: 1;
+}
+@media (hover: hover) {
+  .crystal-trigger:hover :is(.crystal-depth, .crystal-transmission) {
+    opacity: 1;
+  }
+}
+@keyframes crystal-rear-reflection {
+  0%,
+  40%,
+  45%,
+  58%,
+  100% {
+    opacity: 0.1;
+  }
+  47%,
+  49% {
+    opacity: 0.65;
+  }
+  53% {
+    opacity: 0.3;
+  }
+}
+@keyframes crystal-internal-reflection {
+  0% {
+    transform: translate(-18px, -20px) rotate(-7deg) scaleY(0.7);
+    opacity: 0.25;
+  }
+  28% {
+    transform: translate(10px, 8px) rotate(9deg) scaleY(1.1);
+    opacity: 0.85;
+  }
+  57% {
+    transform: translate(-5px, 22px) rotate(-4deg) scaleY(0.8);
+    opacity: 0.4;
+  }
+  81% {
+    transform: translate(18px, -10px) rotate(12deg) scaleY(1.25);
+    opacity: 0.75;
+  }
+  100% {
+    transform: translate(-10px, 4px) rotate(2deg) scaleY(0.9);
+    opacity: 0.35;
+  }
+}
+.crystal-afterglow {
+  opacity: 0;
+  animation: crystal-colour-tail 24s ease-in-out infinite;
+  animation-play-state: paused;
+}
+.is-crystal-lit .crystal-afterglow {
+  animation-play-state: running;
+}
+@keyframes crystal-colour-tail {
+  0%,
+  43%,
+  52%,
+  100% {
+    opacity: 0;
+  }
+  44.5% {
+    opacity: 0.3;
+  }
+  47% {
+    opacity: 0.18;
+  }
+  50% {
+    opacity: 0.04;
+  }
+}
+.crystal-facet-flash {
+  opacity: 0;
+  animation: crystal-full-facet 24s ease-in-out infinite;
+  animation-play-state: paused;
+}
+.crystal-facet-flash-1 {
+  animation-delay: -2.4s;
+}
+.crystal-facet-flash-2 {
+  animation-delay: -4.8s;
+}
+.crystal-facet-flash-3 {
+  animation-delay: -7.2s;
+}
+.crystal-facet-flash-4 {
+  animation-delay: -9.6s;
+}
+.crystal-facet-flash-5 {
+  animation-delay: -12s;
+}
+.crystal-facet-flash-6 {
+  animation-delay: -14.4s;
+}
+.crystal-facet-flash-7 {
+  animation-delay: -16.8s;
+}
+.crystal-facet-flash-8 {
+  animation-delay: -19.2s;
+}
+.crystal-facet-flash-9 {
+  animation-delay: -21.6s;
+}
+.is-crystal-lit .crystal-facet-flash {
+  animation-play-state: running;
+}
+@keyframes crystal-full-facet {
+  0%,
+  40%,
+  45%,
+  100% {
+    opacity: 0;
+  }
+  41.5% {
+    opacity: 0.6;
+  }
+  42%,
+  43% {
+    opacity: 1;
+  }
+  44% {
+    opacity: 0.4;
+  }
+}
+@media (prefers-reduced-motion: reduce), print {
+  .crystal-air-beam,
+  .crystal-inner-glint,
+  .crystal-rear-facet,
+  .crystal-internal-band {
+    animation: none;
+  }
+  .crystal-air {
+    display: none;
+  }
+  .crystal-inner-glint {
+    opacity: 0.1;
+  }
+  .crystal-rear-facet {
+    opacity: 0.12;
+  }
+  .crystal-internal-band {
+    opacity: 0.35;
+  }
+  .crystal-depth,
+  .crystal-transmission {
+    transition: none;
+  }
+  .crystal-transmission-incidence {
+    transform: none;
+  }
+  .crystal-refraction,
+  .crystal-spectral-stop,
+  .crystal-shine {
+    animation: none;
+  }
+  .crystal-afterglow,
+  .crystal-facet-flash {
+    animation: none;
+    opacity: 0;
+  }
+  .crystal-refraction-field {
+    opacity: 0.4;
+    transition: none;
+  }
+  .crystal-pulse,
+  .crystal-guided,
+  .crystal-port > path {
+    animation: none;
+  }
+  .crystal-pulse {
+    opacity: 0.25;
+  }
+  .crystal-coupling {
+    display: none;
+  }
+  .crystal-pulse-field,
+  .crystal-guided-field,
+  .crystal-incidence {
+    transition: none;
+    transform: none;
+  }
+}
+
+.mems-buried-feed {
+  fill: none;
+  stroke: #bca677;
+  stroke-width: 0.9;
+  stroke-dasharray: 2 3;
+  opacity: 0.55;
+}
+.mems-feed-contact {
+  fill: #d6b46f;
+  stroke: #1a3241;
+  stroke-width: 0.8;
+}
+
+
+.crystal-mark{--crystal-letter-1:#f8eeff;--crystal-letter-2:#c7a3ff;--crystal-letter-3:#9373d8;--crystal-letter-4:#ead5ff;--crystal-letter-5:#b390f2;--crystal-ice-edge:#f5e9ff;width:290px!important;height:290px!important} .is-crystal-lit *{animation-play-state:running} @media(prefers-reduced-motion:reduce){*{animation:none!important}}*{animation:none!important}</style><defs><linearGradient id="background"><stop stop-color="#171326"/><stop offset="1" stop-color="#0d1117"/></linearGradient></defs><rect width="1200" height="360" rx="20" fill="url(#background)"/><g class="is-crystal-lit" data-theme="dark"><svg x="35" y="35" width="290" height="290" class="brand-mark crystal-mark crystal-mark-feature" data-crystal="" viewBox="0 0 320 320" fill="none"  focusable="false">
+    <defs>
+      <linearGradient class="crystal-ice-paint" id="crystal-1-ice" x1="42" y1="50" x2="245" y2="264" gradientUnits="userSpaceOnUse"><stop stop-color="#f5e9ff"/><stop offset=".22" stop-color="#a58af0" stop-opacity=".8"/><stop offset=".46" stop-color="#7160bb" stop-opacity=".2"/><stop offset=".7" stop-color="#c7a8ff" stop-opacity=".85"/><stop offset="1" stop-color="#f7edff"/></linearGradient>
+      <linearGradient id="crystal-1-glass" x1="65" y1="240" x2="252" y2="67" gradientUnits="userSpaceOnUse"><stop stop-color="#ae88fc" stop-opacity=".8"/><stop offset=".3" stop-color="#6750b2" stop-opacity=".18"/><stop offset=".56" stop-color="#30336e" stop-opacity=".12"/><stop offset=".8" stop-color="#bda0ff" stop-opacity=".65"/><stop offset="1" stop-color="#eee3ff"/></linearGradient>
+      <linearGradient id="crystal-1-edge" x1="42" y1="90" x2="278" y2="230" gradientUnits="userSpaceOnUse"><stop stop-color="#f5eaff"/><stop offset=".33" stop-color="#a485e8" stop-opacity=".3"/><stop offset=".65" stop-color="#d5bdff" stop-opacity=".85"/><stop offset="1" stop-color="#faf1ff"/></linearGradient>
+      <linearGradient class="crystal-letter-paint" id="crystal-1-letter" x1="108" y1="108" x2="217" y2="232" gradientUnits="userSpaceOnUse"><stop stop-color="#f8eeff"/><stop offset=".28" stop-color="#c7a3ff"/><stop offset=".5" stop-color="#9373d8"/><stop offset=".74" stop-color="#ead5ff"/><stop offset="1" stop-color="#b390f2"/></linearGradient>
+      <linearGradient id="crystal-1-spectrum" x1="0" y1="0" x2="0" y2="1" gradientTransform="rotate(-32 .5 .5)"><stop stop-color="#a585ff" stop-opacity="0"/><stop offset=".32" stop-color="#a585ff" stop-opacity="0"/><stop offset=".43" stop-color="#778aff" stop-opacity=".7"/><stop offset=".49" stop-color="#99f0f1" stop-opacity=".9"/><stop offset=".53" stop-color="#fff2ca"/><stop offset=".58" stop-color="#f4adcf" stop-opacity=".7"/><stop offset=".69" stop-color="#b895ff" stop-opacity="0"/><stop offset="1" stop-color="#b895ff" stop-opacity="0"/></linearGradient>
+      <linearGradient id="crystal-1-polish" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#fcf3ff" stop-opacity=".75"/><stop offset=".24" stop-color="#b691fa" stop-opacity="0"/><stop offset=".56" stop-color="#6744a9" stop-opacity=".12"/><stop offset=".78" stop-color="#ead7ff" stop-opacity=".65"/><stop offset=".83" stop-color="#fff8ff" stop-opacity=".9"/><stop offset="1" stop-color="#c6a0f5" stop-opacity=".12"/></linearGradient>
+      <linearGradient id="crystal-1-guided" x1="42" y1="92" x2="278" y2="228" gradientUnits="userSpaceOnUse"><stop stop-color="#75d9ec"/><stop offset=".3" stop-color="#c0a3ff"/><stop offset=".52" stop-color="#fff1ce"/><stop offset=".76" stop-color="#e5a2d4"/><stop offset="1" stop-color="#89e0ee"/></linearGradient>
+      <linearGradient id="crystal-1-escape"><stop stop-color="#b48ae0" stop-opacity="0"/><stop offset=".45" stop-color="#82d6ed" stop-opacity=".08"/><stop offset=".83" stop-color="#baa2ff" stop-opacity=".32"/><stop offset="1" stop-color="#fff0d5" stop-opacity=".8"/></linearGradient>
+      <radialGradient id="crystal-1-spark"><stop stop-color="#fff5ff"/><stop offset=".18" stop-color="#e3c8ff" stop-opacity=".8"/><stop offset="1" stop-color="#b591ff" stop-opacity="0"/></radialGradient>
+      <linearGradient id="crystal-1-refraction" x1="0" y1="-30" x2="0" y2="30" gradientUnits="userSpaceOnUse"><stop stop-color="#8f6aea" stop-opacity="0"/><stop offset=".2" stop-color="#7d8aff" stop-opacity=".1"/><stop class="crystal-spectral-stop crystal-spectral-cool" offset=".38" stop-color="#8ee9fa" stop-opacity=".55"/><stop offset=".49" stop-color="#f6fff5" stop-opacity=".8"/><stop class="crystal-spectral-stop crystal-spectral-warm" offset=".52" stop-color="#fff5cd" stop-opacity=".8"/><stop class="crystal-spectral-stop crystal-spectral-rose" offset=".66" stop-color="#f2a9dc" stop-opacity=".45"/><stop offset=".85" stop-color="#9c7de5" stop-opacity=".1"/><stop offset="1" stop-color="#9c7de5" stop-opacity="0"/></linearGradient>
+      <filter id="crystal-1-caustic-softness" x="-40%" y="-40%" width="180%" height="180%" color-interpolation-filters="sRGB"><feColorMatrix type="saturate" values="1.6" result="spectral-source"/><feGaussianBlur in="spectral-source" stdDeviation="20" result="spill"/><feComponentTransfer in="spill" result="outer-glow"><feFuncA type="linear" slope="2.8"/></feComponentTransfer><feGaussianBlur in="spectral-source" stdDeviation="5" result="near-glow"/><feGaussianBlur in="SourceGraphic" stdDeviation="1.15" result="reflection"/><feMerge><feMergeNode in="outer-glow"/><feMergeNode in="near-glow"/><feMergeNode in="reflection"/></feMerge></filter>
+      <filter id="crystal-1-facet-bloom" x="-25%" y="-25%" width="150%" height="150%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="7"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+      <linearGradient id="crystal-1-brilliance" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e4d0ff"/><stop offset=".22" stop-color="#efffff"/><stop offset=".45" stop-color="#ffffff"/><stop offset=".7" stop-color="#fff9e6"/><stop offset="1" stop-color="#c8bcff"/></linearGradient>
+      <linearGradient id="crystal-1-depth" x1="42" y1="40" x2="250" y2="280" gradientUnits="userSpaceOnUse"><stop stop-color="#3959bd"/><stop offset=".28" stop-color="#5641b5"/><stop offset=".52" stop-color="#2998ad"/><stop offset=".74" stop-color="#a4439b"/><stop offset="1" stop-color="#b77542"/></linearGradient>
+      <linearGradient id="crystal-1-dispersion" x1="0" y1="-12" x2="0" y2="12" gradientUnits="userSpaceOnUse"><stop stop-color="#494cce" stop-opacity="0"/><stop offset=".22" stop-color="#6975f6" stop-opacity=".5"/><stop offset=".4" stop-color="#5dd9dd" stop-opacity=".8"/><stop offset=".49" stop-color="#ddf8e7" stop-opacity=".85"/><stop offset=".54" stop-color="#efd496" stop-opacity=".85"/><stop offset=".67" stop-color="#d97eab" stop-opacity=".65"/><stop offset=".81" stop-color="#8850c8" stop-opacity=".25"/><stop offset="1" stop-color="#8850c8" stop-opacity="0"/></linearGradient>
+      <filter id="crystal-1-depth-spill" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="9"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+      <radialGradient id="crystal-1-stream"><stop stop-color="#e4fff4" stop-opacity=".7"/><stop offset=".2" stop-color="#85ddd8" stop-opacity=".65"/><stop offset=".52" stop-color="#9b91ef" stop-opacity=".35"/><stop offset=".78" stop-color="#da9bc2" stop-opacity=".12"/><stop offset="1" stop-color="#8e7add" stop-opacity="0"/></radialGradient>
+      <linearGradient id="crystal-1-mist" x1="0" y1="0" x2="52" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#d7f5f3" stop-opacity=".7"/><stop offset=".25" stop-color="#86bdda" stop-opacity=".35"/><stop offset=".62" stop-color="#b49ddd" stop-opacity=".1"/><stop offset="1" stop-color="#b49ddd" stop-opacity="0"/></linearGradient>
+      <filter id="crystal-1-mist-softness" x="-25%" y="-100%" width="150%" height="300%"><feGaussianBlur stdDeviation="3.5"/></filter>
+      <clipPath id="crystal-1-shell-cut"><path d="M160 24 278 92 278 228 160 296 42 228 42 92Z"/></clipPath>
+      <clipPath id="crystal-1-face-0"><polygon points="160,24 42,92 100,125"/></clipPath><clipPath id="crystal-1-face-1"><polygon points="160,24 220,125 278,92"/></clipPath><clipPath id="crystal-1-face-2"><polygon points="42,92 42,228 100,125"/></clipPath><clipPath id="crystal-1-face-3"><polygon points="278,92 220,125 278,228"/></clipPath><clipPath id="crystal-1-face-4"><polygon points="42,228 160,296 104,228"/></clipPath><clipPath id="crystal-1-face-5"><polygon points="160,296 278,228 216,228"/></clipPath><clipPath id="crystal-1-face-6"><polygon points="104,228 160,296 216,228"/></clipPath>
+      <clipPath id="crystal-1-face-7"><path d="M74 228 160 85 246 228ZM160 128 124 193H196ZM115 209 104 228H216L205 209Z" clip-rule="evenodd"/></clipPath>
+      <clipPath id="crystal-1-cut"><g><polygon points="160,24 42,92 100,125"/><polygon points="160,24 220,125 278,92"/><polygon points="42,92 42,228 100,125"/><polygon points="278,92 220,125 278,228"/><polygon points="42,228 160,296 104,228"/><polygon points="160,296 278,228 216,228"/><polygon points="104,228 160,296 216,228"/><path d="M74 228 160 85 246 228ZM160 128 124 193H196ZM115 209 104 228H216L205 209Z" clip-rule="evenodd"/></g></clipPath>
+      <linearGradient id="crystal-1-cyan"><stop stop-color="#4674e9" stop-opacity="0"/><stop offset=".36" stop-color="#4674e9" stop-opacity=".2"/><stop offset=".52" stop-color="#8af1eb" stop-opacity=".85"/><stop offset=".58" stop-color="#fffcef" stop-opacity=".65"/><stop offset=".7" stop-color="#4674e9" stop-opacity=".3"/><stop offset="1" stop-color="#4674e9" stop-opacity="0"/></linearGradient><linearGradient id="crystal-1-rose"><stop stop-color="#924ae3" stop-opacity="0"/><stop offset=".36" stop-color="#924ae3" stop-opacity=".2"/><stop offset=".52" stop-color="#f3a7cb" stop-opacity=".85"/><stop offset=".58" stop-color="#fffcef" stop-opacity=".65"/><stop offset=".7" stop-color="#924ae3" stop-opacity=".3"/><stop offset="1" stop-color="#924ae3" stop-opacity="0"/></linearGradient><linearGradient id="crystal-1-gold"><stop stop-color="#ef9974" stop-opacity="0"/><stop offset=".36" stop-color="#ef9974" stop-opacity=".2"/><stop offset=".52" stop-color="#fff3b0" stop-opacity=".85"/><stop offset=".58" stop-color="#fffcef" stop-opacity=".65"/><stop offset=".7" stop-color="#ef9974" stop-opacity=".3"/><stop offset="1" stop-color="#ef9974" stop-opacity="0"/></linearGradient>
+    </defs>
+    <g class="crystal-air" fill="url(#crystal-1-mist)" filter="url(#crystal-1-mist-softness)">
+      <g transform="translate(42 92) rotate(210)"><g class="crystal-air-beam crystal-air-beam-0"><path d="M-3-2Q20-6 52-14V14Q20 6-3 2Z"/><path d="M0-1Q24-1 48-5V5Q24 1 0 1Z" opacity=".45"/></g></g><g transform="translate(278 228) rotate(32)"><g class="crystal-air-beam crystal-air-beam-1"><path d="M-3-2Q20-6 52-14V14Q20 6-3 2Z"/><path d="M0-1Q24-1 48-5V5Q24 1 0 1Z" opacity=".45"/></g></g><g transform="translate(278 92) rotate(-40)"><g class="crystal-air-beam crystal-air-beam-2"><path d="M-3-2Q20-6 52-14V14Q20 6-3 2Z"/><path d="M0-1Q24-1 48-5V5Q24 1 0 1Z" opacity=".45"/></g></g>
+    </g>
+    <!-- A subdued rear pavilion: the glow is made from the facet pixels,
+         not an unrelated circular halo. Its peaks follow the front flashes. -->
+    <g class="crystal-depth" transform="translate(0 5)" fill="url(#crystal-1-depth)" filter="url(#crystal-1-depth-spill)">
+      <polygon class="crystal-rear-facet crystal-facet-flash-0" points="160,24 42,92 100,125"/><polygon class="crystal-rear-facet crystal-facet-flash-1" points="160,24 220,125 278,92"/><polygon class="crystal-rear-facet crystal-facet-flash-2" points="42,92 42,228 100,125"/><polygon class="crystal-rear-facet crystal-facet-flash-3" points="278,92 220,125 278,228"/><polygon class="crystal-rear-facet crystal-facet-flash-4" points="42,228 160,296 104,228"/><polygon class="crystal-rear-facet crystal-facet-flash-5" points="160,296 278,228 216,228"/><polygon class="crystal-rear-facet crystal-facet-flash-6" points="104,228 160,296 216,228"/>
+      <path class="crystal-rear-facet crystal-facet-flash-7" d="M74 228 160 85 246 228ZM160 128 124 193H196ZM115 209 104 228H216L205 209Z" fill-rule="evenodd"/>
+    </g>
+    <g class="crystal-body">
+      <path d="M160 24 278 92 278 228 160 296 42 228 42 92Z" fill="#604b9e" fill-opacity=".07"/>
+      <g class="crystal-inner-cuts" clip-path="url(#crystal-1-shell-cut)" fill="url(#crystal-1-dispersion)" filter="url(#crystal-1-facet-bloom)">
+        <g transform="translate(114 100) rotate(-48)"><path class="crystal-inner-glint crystal-inner-glint-0" d="M-39-16 45-5-15 28Z"/></g><g transform="translate(222 161) rotate(60)"><path class="crystal-inner-glint crystal-inner-glint-1" d="M-30-18 48 8-35 30Z"/></g><g transform="translate(150 259) rotate(-24)"><path class="crystal-inner-glint crystal-inner-glint-2" d="M-44-21 53 4-8 27Z"/></g>
+      </g>
+      <polygon points="160,24 42,92 100,125" fill="url(#crystal-1-ice)"/><polygon points="160,24 220,125 278,92" fill="url(#crystal-1-ice)"/><polygon points="42,92 42,228 100,125" fill="url(#crystal-1-glass)"/><polygon points="278,92 220,125 278,228" fill="url(#crystal-1-glass)"/><polygon points="42,228 160,296 104,228" fill="url(#crystal-1-ice)"/><polygon points="160,296 278,228 216,228" fill="url(#crystal-1-ice)"/><polygon points="104,228 160,296 216,228" fill="url(#crystal-1-glass)"/>
+      <path d="M160 24 42 92V228L160 296 278 228V92ZM160 32 49 96V224L160 288 271 224V96Z" fill="url(#crystal-1-edge)" fill-rule="evenodd" opacity=".65"/>
+      <path d="M74 228 160 85 246 228ZM160 128 124 193H196ZM115 209 104 228H216L205 209Z" fill="url(#crystal-1-letter)" fill-rule="evenodd"/>
+      <g class="crystal-letter-facets" clip-path="url(#crystal-1-face-7)">
+        <path d="M74 228 160 85 142 150Z M160 85 246 228 178 150Z" fill="url(#crystal-1-ice)" opacity=".7"/>
+        <path d="M74 228 142 150 160 128 104 228Z M160 128 178 150 246 228 216 228Z" fill="url(#crystal-1-glass)" opacity=".6"/>
+        <path d="M160 85 142 150 160 128 178 150Z M124 193 196 193 160 203Z M115 209 160 203 205 209Z" fill="url(#crystal-1-polish)" opacity=".8"/>
+        <path d="M74 228 142 150 160 85 178 150 246 228M124 193 160 203 196 193" fill="none" stroke="url(#crystal-1-edge)" stroke-width=".8" opacity=".6"/>
+      </g>
+      <path d="M79 225 160 91 241 225M107 225 160 133 213 225M125 195H195M117 208H203" stroke="url(#crystal-1-edge)" stroke-width="1.6" stroke-linejoin="round"/>
+      <g class="crystal-light crystal-light-a" fill="url(#crystal-1-spectrum)">
+        <path d="M42 92 160 24 100 125Z"/><path d="M220 125 278 92 278 228Z"/><path d="M42 228 160 296 104 228Z"/>
+
+      </g>
+      <g class="crystal-light crystal-light-b" fill="url(#crystal-1-spectrum)" transform="rotate(180 160 160)">
+        <path d="M42 92 160 24 100 125Z"/><path d="M220 125 278 92 278 228Z"/>
+      </g>
+      <g class="crystal-pulse-field" clip-path="url(#crystal-1-cut)">
+        <g class="crystal-incidence">
+        <g class="crystal-pulse crystal-pulse-cyan"><path d="M-90-100H10L250 420H150Z" fill="url(#crystal-1-cyan)"/></g>
+        <g class="crystal-pulse crystal-pulse-rose"><path d="M210-100H300L60 420H-30Z" fill="url(#crystal-1-rose)"/></g>
+        <g class="crystal-pulse crystal-pulse-gold"><path d="M-180 270 380-70 420-5-140 335Z" fill="url(#crystal-1-gold)"/></g>
+        </g>
+      </g>
+      <g class="crystal-refraction-field" filter="url(#crystal-1-caustic-softness)">
+        <g clip-path="url(#crystal-1-face-0)"><g transform="translate(100.66666666666669 80.33333333333334) rotate(-28)"><g class="crystal-deflection" data-wave-x="100.66666666666669" data-wave-y="80.33333333333334"><g class="crystal-refraction crystal-refraction-0">
+          <path d="M-160-20Q-65-65 0-5T160-20L160-2Q65 40 0 9T-160-2Z" fill="url(#crystal-1-refraction)"/>
+          <path class="crystal-refraction-white" d="M-160-10Q-65-55 0 0T160-10" fill="none" stroke="#fff9f4" stroke-width="2"/>
+          <path d="M-130 22Q-35-6 50 28T150 15L150 30Q65 66 0 37T-130 29Z" fill="url(#crystal-1-refraction)" opacity=".18"/>
+        </g></g></g></g><g clip-path="url(#crystal-1-face-1)"><g transform="translate(219.33333333333331 80.33333333333333) rotate(28)"><g class="crystal-deflection" data-wave-x="219.33333333333331" data-wave-y="80.33333333333333"><g class="crystal-refraction crystal-refraction-1">
+          <path d="M-160-20Q-65-65 0-5T160-20L160-2Q65 40 0 9T-160-2Z" fill="url(#crystal-1-refraction)"/>
+          <path class="crystal-refraction-white" d="M-160-10Q-65-55 0 0T160-10" fill="none" stroke="#fff9f4" stroke-width="2"/>
+          <path d="M-130 22Q-35-6 50 28T150 15L150 30Q65 66 0 37T-130 29Z" fill="url(#crystal-1-refraction)" opacity=".18"/>
+        </g></g></g></g><g clip-path="url(#crystal-1-face-2)"><g transform="translate(61.333333333333336 148.33333333333334) rotate(-55)"><g class="crystal-deflection" data-wave-x="61.333333333333336" data-wave-y="148.33333333333334"><g class="crystal-refraction crystal-refraction-2">
+          <path d="M-160-20Q-65-65 0-5T160-20L160-2Q65 40 0 9T-160-2Z" fill="url(#crystal-1-refraction)"/>
+          <path class="crystal-refraction-white" d="M-160-10Q-65-55 0 0T160-10" fill="none" stroke="#fff9f4" stroke-width="2"/>
+          <path d="M-130 22Q-35-6 50 28T150 15L150 30Q65 66 0 37T-130 29Z" fill="url(#crystal-1-refraction)" opacity=".18"/>
+        </g></g></g></g><g clip-path="url(#crystal-1-face-3)"><g transform="translate(258.6666666666667 148.33333333333331) rotate(55)"><g class="crystal-deflection" data-wave-x="258.6666666666667" data-wave-y="148.33333333333331"><g class="crystal-refraction crystal-refraction-3">
+          <path d="M-160-20Q-65-65 0-5T160-20L160-2Q65 40 0 9T-160-2Z" fill="url(#crystal-1-refraction)"/>
+          <path class="crystal-refraction-white" d="M-160-10Q-65-55 0 0T160-10" fill="none" stroke="#fff9f4" stroke-width="2"/>
+          <path d="M-130 22Q-35-6 50 28T150 15L150 30Q65 66 0 37T-130 29Z" fill="url(#crystal-1-refraction)" opacity=".18"/>
+        </g></g></g></g><g clip-path="url(#crystal-1-face-4)"><g transform="translate(102 250.66666666666669) rotate(30)"><g class="crystal-deflection" data-wave-x="102" data-wave-y="250.66666666666669"><g class="crystal-refraction crystal-refraction-4">
+          <path d="M-160-20Q-65-65 0-5T160-20L160-2Q65 40 0 9T-160-2Z" fill="url(#crystal-1-refraction)"/>
+          <path class="crystal-refraction-white" d="M-160-10Q-65-55 0 0T160-10" fill="none" stroke="#fff9f4" stroke-width="2"/>
+          <path d="M-130 22Q-35-6 50 28T150 15L150 30Q65 66 0 37T-130 29Z" fill="url(#crystal-1-refraction)" opacity=".18"/>
+        </g></g></g></g><g clip-path="url(#crystal-1-face-5)"><g transform="translate(218 250.66666666666669) rotate(-30)"><g class="crystal-deflection" data-wave-x="218" data-wave-y="250.66666666666669"><g class="crystal-refraction crystal-refraction-5">
+          <path d="M-160-20Q-65-65 0-5T160-20L160-2Q65 40 0 9T-160-2Z" fill="url(#crystal-1-refraction)"/>
+          <path class="crystal-refraction-white" d="M-160-10Q-65-55 0 0T160-10" fill="none" stroke="#fff9f4" stroke-width="2"/>
+          <path d="M-130 22Q-35-6 50 28T150 15L150 30Q65 66 0 37T-130 29Z" fill="url(#crystal-1-refraction)" opacity=".18"/>
+        </g></g></g></g><g clip-path="url(#crystal-1-face-6)"><g transform="translate(160 250.66666666666669) rotate(0)"><g class="crystal-deflection" data-wave-x="160" data-wave-y="250.66666666666669"><g class="crystal-refraction crystal-refraction-6">
+          <path d="M-160-20Q-65-65 0-5T160-20L160-2Q65 40 0 9T-160-2Z" fill="url(#crystal-1-refraction)"/>
+          <path class="crystal-refraction-white" d="M-160-10Q-65-55 0 0T160-10" fill="none" stroke="#fff9f4" stroke-width="2"/>
+          <path d="M-130 22Q-35-6 50 28T150 15L150 30Q65 66 0 37T-130 29Z" fill="url(#crystal-1-refraction)" opacity=".18"/>
+        </g></g></g></g><g clip-path="url(#crystal-1-face-7)"><g transform="translate(160 163) rotate(-20)"><g class="crystal-deflection" data-wave-x="160" data-wave-y="163"><g class="crystal-refraction crystal-refraction-7">
+          <path d="M-160-20Q-65-65 0-5T160-20L160-2Q65 40 0 9T-160-2Z" fill="url(#crystal-1-refraction)"/>
+          <path class="crystal-refraction-white" d="M-160-10Q-65-55 0 0T160-10" fill="none" stroke="#fff9f4" stroke-width="2"/>
+          <path d="M-130 22Q-35-6 50 28T150 15L150 30Q65 66 0 37T-130 29Z" fill="url(#crystal-1-refraction)" opacity=".18"/>
+        </g></g></g></g>
+      </g>
+      <!-- Sharp internal dispersion above the softened reflections. The A
+           shares this optical field, so its bevels catch the same incident light. -->
+      <g class="crystal-transmission" clip-path="url(#crystal-1-cut)">
+        <g class="crystal-transmission-incidence">
+          <g transform="translate(160 72) rotate(-28)"><g class="crystal-internal-band crystal-internal-band-0"><path d="M-180-12Q-60-22 20-5T180-12V12Q60 22-20 5T-180 12Z" fill="url(#crystal-1-dispersion)"/></g></g><g transform="translate(160 168) rotate(32)"><g class="crystal-internal-band crystal-internal-band-1"><path d="M-180-12Q-60-22 20-5T180-12V12Q60 22-20 5T-180 12Z" fill="url(#crystal-1-dispersion)"/></g></g><g transform="translate(160 255) rotate(-18)"><g class="crystal-internal-band crystal-internal-band-2"><path d="M-180-12Q-60-22 20-5T180-12V12Q60 22-20 5T-180 12Z" fill="url(#crystal-1-dispersion)"/></g></g>
+        </g>
+      </g>
+      <g class="crystal-guided-field" clip-path="url(#crystal-1-cut)" fill="url(#crystal-1-stream)">
+        <g class="crystal-route crystal-route-0"><g class="crystal-guided crystal-guided-core"><ellipse rx="46" ry="16"/><ellipse rx="27" ry="7" opacity=".45"/></g></g><g class="crystal-route crystal-route-1"><g class="crystal-guided crystal-guided-core"><ellipse rx="46" ry="16"/><ellipse rx="27" ry="7" opacity=".45"/></g></g><g class="crystal-route crystal-route-2"><g class="crystal-guided crystal-guided-core"><ellipse rx="46" ry="16"/><ellipse rx="27" ry="7" opacity=".45"/></g></g>
+      </g>
+      <g class="crystal-seams" stroke="url(#crystal-1-edge)" stroke-width=".65" stroke-linejoin="round">
+        <path d="M160 24V85M42 92 100 125 42 228H278L220 125 278 92M104 228 160 296 216 228"/>
+      </g>
+      <path d="M160 24 278 92 278 228 160 296 42 228 42 92ZM74 228 160 85 246 228M104 228 160 128 216 228" stroke="var(--af-purple, #9873cc)" stroke-opacity=".5" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M160 24 278 92 278 228 160 296 42 228 42 92ZM160 24 100 125M160 24 220 125M74 228 160 85 246 228M104 228 160 128 216 228" stroke="url(#crystal-1-edge)" stroke-width="1.05" stroke-linejoin="round"/>
+      <path d="M160 24 42 92 100 125M278 92 278 228 216 228M74 228 160 85M160 296 104 228M125 193H195" stroke="#fff2ff" stroke-opacity=".75" stroke-width=".7"/>
+      <g class="crystal-facet-shine" fill="none" stroke="url(#crystal-1-edge)" stroke-linecap="round">
+        <path class="crystal-shine crystal-shine-a" d="M42 92 160 24 220 125"/>
+        <path class="crystal-shine crystal-shine-b" d="M74 228 142 150 160 85 178 150 246 228"/>
+        <path class="crystal-shine crystal-shine-c" d="M104 228 160 296 278 228"/>
+      </g>
+      <g class="crystal-facet-flashes" fill="url(#crystal-1-brilliance)" filter="url(#crystal-1-facet-bloom)">
+        <polygon class="crystal-facet-flash crystal-facet-flash-0" points="160,24 42,92 100,125"/><polygon class="crystal-facet-flash crystal-facet-flash-1" points="160,24 220,125 278,92"/><polygon class="crystal-facet-flash crystal-facet-flash-2" points="42,92 42,228 100,125"/><polygon class="crystal-facet-flash crystal-facet-flash-3" points="278,92 220,125 278,228"/><polygon class="crystal-facet-flash crystal-facet-flash-4" points="42,228 160,296 104,228"/><polygon class="crystal-facet-flash crystal-facet-flash-5" points="160,296 278,228 216,228"/><polygon class="crystal-facet-flash crystal-facet-flash-6" points="104,228 160,296 216,228"/><polygon class="crystal-facet-flash crystal-facet-flash-7" points="74,228 160,85 142,150"/><polygon class="crystal-facet-flash crystal-facet-flash-8" points="160,85 246,228 178,150"/><polygon class="crystal-facet-flash crystal-facet-flash-9" points="124,193 196,193 160,203"/>
+      </g>
+      <g class="crystal-afterglows" filter="url(#crystal-1-facet-bloom)">
+        <polygon class="crystal-afterglow crystal-facet-flash-0" points="160,24 42,92 100,125" fill="#57cdd6"/><polygon class="crystal-afterglow crystal-facet-flash-3" points="278,92 220,125 278,228" fill="#9773e8"/><polygon class="crystal-afterglow crystal-facet-flash-6" points="104,228 160,296 216,228" fill="#dba85c"/><polygon class="crystal-afterglow crystal-facet-flash-7" points="74,228 160,85 142,150" fill="#75b8e2"/>
+      </g>
+    </g>
+    <g class="crystal-coupling" fill="url(#crystal-1-escape)" filter="url(#crystal-1-mist-softness)">
+      <g class="crystal-port crystal-port-a"><path d="M4 68 42 90 42 96 4 88Z"/><path class="crystal-port-spectrum" d="M6 74 42 91 42 94 6 82Z"/></g>
+      <g class="crystal-port crystal-port-b" transform="rotate(180 160 160)"><path d="M4 68 42 90 42 96 4 88Z"/><path class="crystal-port-spectrum" d="M6 74 42 91 42 94 6 82Z"/></g>
+      <g class="crystal-port crystal-port-c" transform="rotate(-60 42 228)"><path d="M6 215 42 226 42 231 6 239Z"/></g>
+    </g>
+    <g class="crystal-glints crystal-light crystal-light-c" fill="url(#crystal-1-spark)">
+      <circle cx="160" cy="24" r="12"/><circle cx="42" cy="228" r="11"/><circle cx="278" cy="92" r="10"/><circle cx="160" cy="296" r="13"/>
+    </g>
+    <g class="crystal-freckles crystal-light crystal-light-b" fill="url(#crystal-1-spark)">
+      <ellipse cx="42" cy="92" rx="16" ry="2" transform="rotate(-30 42 92)"/>
+      <ellipse cx="278" cy="228" rx="19" ry="2" transform="rotate(30 278 228)"/>
+      <circle cx="42" cy="92" r="3"/><circle cx="278" cy="228" r="3"/>
+    </g>
+  </svg></g><g font-family="Arial,Helvetica,sans-serif"><text x="370" y="115" fill="#f1edf7" font-size="50" font-weight="600" letter-spacing="-2">artifactory<tspan fill="#bd98f3">.</tspan></text><text x="373" y="181" fill="#f1edf7" font-size="32">Design with light. Read the world.</text><text x="374" y="226" fill="#b2adbf" font-size="20">Optical sensing · Photonic design · Engineering tools</text><text x="374" y="286" fill="#b99bdf" font-size="16" letter-spacing="2">ARTIFACTORY.TECH</text></g></svg>
